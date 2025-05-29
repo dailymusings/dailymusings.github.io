@@ -1325,14 +1325,10 @@ body.dark-theme .highlight .code .meta {
 body {
   font-family: 'NanumSquare', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
-.header-logo {
-  display: flex;
-  align-items: center;
-  padding: 0.5rem 0;
-}
-.header-logo a {
-  font-size: 2rem !important;
+.navbar-header.header-logo a {
+  font-size: 2.2rem !important;
   font-weight: 700 !important;
-  color: inherit;
-  text-decoration: none;
+  line-height: 1.2 !important;
+  color: inherit !important;
+  text-decoration: none !important;
 }
