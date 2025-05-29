@@ -1333,3 +1333,15 @@ body {
   text-decoration: none !important;
   letter-spacing: -0.2px;
 }
+.post-meta {
+  font-size: 0.9rem;
+  color: #888;
+}
+.post-meta a {
+  color: #888;
+  text-decoration: none;
+}
+.separator {
+  padding: 0 0.5rem;
+  color: #aaa;
+}
