@@ -1322,8 +1322,10 @@ body.dark-theme .highlight .code .deletion,
 body.dark-theme .highlight .code .meta {
   color: #7f7f7f;
 }
+body {
+  font-family: 'NanumSquare', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
 .navname {
   font-size: 2rem;
-  font-weight: bold;
-  color: inherit;
+  font-weight: 700;
 }
