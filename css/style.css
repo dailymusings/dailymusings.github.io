@@ -1345,3 +1345,34 @@ body {
   padding: 0 0.5rem;
   color: #aaa;
 }
+html {
+  font-size: 110%;
+}
+body {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  padding: 0 1rem;
+}
+.post-title {
+  font-size: 2rem;
+  line-height: 1.3;
+}
+.post-content {
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+.menu-item {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 100%;
+  }
+  .post-title {
+    font-size: 1.5rem;
+  }
+  .post-content {
+    font-size: 1rem;
+  }
+}
