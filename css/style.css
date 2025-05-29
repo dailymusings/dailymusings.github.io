@@ -1356,11 +1356,13 @@ body {
   padding: 0 0.5rem;
   color: #aaa;
 }
-.archive-item-excerpt {
-  font-size: 0.95rem;
-  color: #666;
-  margin-top: 0.3rem;
-  line-height: 1.5;
+.post-title {
+  font-size: 2rem;
+  line-height: 1.3;
+}
+.post-content {
+  font-size: 1rem;
+  line-height: 1.75;
 }
 .archive .archive-item {
   background: #fff;
@@ -1377,16 +1379,18 @@ body {
 .archive .archive-item-link {
   font-size: 1.05rem;
   font-weight: 600;
-  line-height: 1.5;
-  color: #111;
-  margin-bottom: 0.3rem;
+  line-height: 1.4;
+  letter-spacing: -0.15px;
+  margin-bottom: 0.4rem;
   display: block;
+  color: #111;
 }
 .archive .archive-item-excerpt {
   font-size: 1rem;
   color: #666;
-  line-height: 1.6;
-  margin-bottom: 0.8rem;
+  line-height: 1.5;
+  letter-spacing: -0.2px;
+  margin-bottom: 0.6rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -1398,19 +1402,58 @@ body {
   color: #aaa;
   display: block;
 }
-body.dark-theme .archive .archive-item {
+.category-wrap {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #222;
+}
+.categories-card {
+  margin-top: 1.5rem;
+}
+.categories-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.categories a {
+  display: block;
+  margin: 0.4rem 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+.tag-wrap {
+  font-size: 1.05rem;
+  text-align: center;
+}
+.tag-cloud-tags {
+  margin-top: 1rem;
+  line-height: 2rem;
+}
+.tag-cloud-tags a {
+  font-size: 1.05rem;
+  margin: 0 0.6rem 0.6rem 0;
+  display: inline-block;
+  color: #333;
+}
+body.dark-theme .archive-item {
   background: #1e1e1e;
   border-color: #333;
   box-shadow: 0 2px 6px rgba(255,255,255,0.05);
 }
-body.dark-theme .archive .archive-item-link {
+body.dark-theme .archive-item-link {
   color: #ddd;
 }
-body.dark-theme .archive .archive-item-excerpt {
+body.dark-theme .archive-item-excerpt {
   color: #aaa;
 }
-body.dark-theme .archive .archive-item-date {
+body.dark-theme .archive-item-date {
   color: #888;
+}
+body.dark-theme .categories a {
+  color: #ccc;
+}
+body.dark-theme .tag-cloud-tags a {
+  color: #bbb;
 }
 @media (max-width: 768px) {
   .archive .archive-item {
@@ -1418,11 +1461,17 @@ body.dark-theme .archive .archive-item-date {
   }
   .archive .archive-item-link {
     font-size: 1rem;
+    line-height: 1.4;
   }
   .archive .archive-item-excerpt {
     font-size: 0.95rem;
+    line-height: 1.5;
   }
   .archive .archive-item-date {
     font-size: 0.8rem;
+  }
+  .categories a,
+  .tag-cloud-tags a {
+    font-size: 1rem;
   }
 }
