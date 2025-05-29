@@ -19,7 +19,7 @@
     <meta name="keywords" content="플랫폼 기획, AI, 기술활용, 개발블로그, 기획자의 일상">
 
 
-<title>[object Object] | qtae.log</title>
+<title>qtae.log</title>
 
 
 
@@ -140,76 +140,11 @@
                 <div class="container">
     
     
-        <div class="post-toc">
-    <div class="tocbot-list">
-    </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-    </div>
-</div>
-
-<script>
-    var tocbot_timer;
-    var DEPTH_MAX = 6; // 为 6 时展开所有
-    var tocbot_default_config = {
-        tocSelector: '.tocbot-list',
-        contentSelector: '.post-content',
-        headingSelector: 'h1, h2, h3, h4, h5',
-        orderedList: false,
-        scrollSmooth: true,
-        onClick: extend_click,
-    };
-
-    function extend_click() {
-        clearTimeout(tocbot_timer);
-        tocbot_timer = setTimeout(function() {
-            tocbot.refresh(obj_merge(tocbot_default_config, {
-                hasInnerContainers: true
-            }));
-        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
-    }
-
-    document.ready(function() {
-        tocbot.init(obj_merge(tocbot_default_config, {
-            collapseDepth: 1
-        }));
-    });
-
-    function expand_toc() {
-        var b = document.querySelector('.tocbot-toc-expand');
-        var expanded = b.getAttribute('data-expanded');
-        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
-        tocbot.refresh(obj_merge(tocbot_default_config, {
-            collapseDepth: expanded ? 1 : DEPTH_MAX
-        }));
-        b.innerText = expanded ? 'Expand all' : 'Collapse all';
-    }
-
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
-
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
-    function obj_merge(target, source) {
-        for (var item in source) {
-            if (source.hasOwnProperty(item)) {
-                target[item] = source[item];
-            }
-        }
-        return target;
-    }
-</script>
-    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">[object Object]</h1>
+            <h1 class="post-title"></h1>
             
                 <div class="post-meta">
                     
@@ -218,7 +153,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">5월 29, 2025&nbsp;&nbsp;15:49:05</a>
+                        Date: <a href="#">5월 29, 2025&nbsp;&nbsp;18:35:59</a>
                         </span>
                     
                     
@@ -227,9 +162,7 @@
         </header>
 
         <div class="post-content">
-            <h1 id=""><a href="#" class="headerlink" title=""></a>[object Object]</h1><p>여기에 내용을 작성하세요.</p>
-<p><img src="/./%3C!--swig%EF%BF%BC1--%3E/image.png" alt="예시 이미지"></p>
-
+            
         </div>
 
         
@@ -243,7 +176,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="https://dailymusings.github.io/2025/05/29/blog/Template/Hexo%20Post%20Template.md/">https://dailymusings.github.io/2025/05/29/blog/Template/Hexo%20Post%20Template.md/</a></span>
+                        <span><a href="https://dailymusings.github.io/2025/05/29/blog/%7B%7Bfile_name%7D%7D/image.png/">https://dailymusings.github.io/2025/05/29/blog/%7B%7Bfile_name%7D%7D/image.png/</a></span>
                     </p>
                 
                 
@@ -276,10 +209,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2025/05/29/blog/%7B%7Bfile_name%7D%7D/image.png/"></a>
             
-            
-            <a class="next" rel="next" href="/2025/05/29/blog/Welcome/"></a>
+            <a class="next" rel="next" href="/2025/05/29/blog/Template/Hexo%20Post%20Template.md/">[object Object]</a>
             
         </section>
 
