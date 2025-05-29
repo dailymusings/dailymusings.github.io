@@ -1,7 +1,14 @@
 body {
   font-family: 'NanumSquare', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
-.navname {
-  font-size: 2rem;
-  font-weight: 700;
+.header-logo {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+.header-logo a {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  color: inherit;
+  text-decoration: none;
 }
