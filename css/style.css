@@ -1326,9 +1326,10 @@ body {
   font-family: 'NanumSquare', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 .navbar-header.header-logo a {
-  font-size: 2.2rem !important;
-  font-weight: 700 !important;
-  line-height: 1.2 !important;
+  font-size: 1.4rem !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
   color: inherit !important;
   text-decoration: none !important;
+  letter-spacing: -0.5px;
 }
