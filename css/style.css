@@ -1325,13 +1325,6 @@ body.dark-theme .highlight .code .meta {
 body {
   font-family: 'NanumSquare', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
-html {
-  font-size: 110%;
-}
-body {
-  line-height: 1.75;
-  padding: 0 1rem;
-}
 .navbar-header.header-logo a {
   font-size: 1.2rem !important;
   font-weight: 500 !important;
