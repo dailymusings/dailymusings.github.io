@@ -1379,6 +1379,10 @@ body {
   font-size: 1.125rem;
   line-height: 1.6;
 }
+.category-wrap .categories-card h3 {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
 @media (max-width: 768px) {
   html {
     font-size: 100%;
