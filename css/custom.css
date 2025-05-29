@@ -85,7 +85,7 @@ body {
   line-height: 1.5;
   letter-spacing: -0.1px;
   color: #111;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.6rem;
   display: block;
 }
 .archive .archive-item-excerpt,
@@ -126,6 +126,24 @@ body {
   font-size: 1rem;
   padding: 0.5rem 1rem;
 }
+pre {
+  background: #f7f7f7;
+  border-radius: 6px;
+  padding: 1rem;
+  overflow: auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 1.5rem 0;
+  font-family: 'Fira Code', 'Consolas', monospace;
+}
+pre code {
+  display: block;
+  white-space: pre-wrap;
+}
+code {
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 0.95rem;
+}
 body.dark-theme .archive .archive-item,
 body.dark-theme .category-wrap .archive-item,
 body.dark-theme .tag-wrap .archive-item,
@@ -153,6 +171,10 @@ body.dark-theme .archive .archive-item-date,
 body.dark-theme .category-wrap .archive-item-date,
 body.dark-theme .tag-wrap .archive-item-date {
   color: #888;
+}
+body.dark-theme pre {
+  background: #2d2d2d;
+  color: #eee;
 }
 @media (max-width: 768px) {
   .archive .archive-item,
