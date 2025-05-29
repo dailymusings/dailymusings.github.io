@@ -21,17 +21,12 @@ body {
   padding: 0 0.5rem;
   color: #aaa;
 }
-/* 전체 레이아웃 폰트 크기 및 줄간격 확대 */
 html {
   font-size: 110%;
 }
 body {
   line-height: 1.75;
   padding: 0 1rem;
-}
-.category-wrap {
-  font-size: 1.125rem;
-  line-height: 1.75;
 }
 .post-title {
   font-size: 2rem;
@@ -45,7 +40,18 @@ body {
   font-size: 1rem;
   padding: 0.5rem 1rem;
 }
-/* 모바일 대응 */
+.category-wrap,
+.archive {
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+.archive-item {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+.archive-item-link {
+  font-size: 1.125rem;
+}
 @media (max-width: 768px) {
   html {
     font-size: 100%;
