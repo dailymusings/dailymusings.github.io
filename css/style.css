@@ -1375,6 +1375,10 @@ body {
   font-size: 1.125rem;
   line-height: 1.6;
 }
+.tag-cloud-tags a {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
 @media (max-width: 768px) {
   html {
     font-size: 100%;
