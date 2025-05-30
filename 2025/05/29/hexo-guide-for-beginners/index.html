@@ -1,250 +1,354 @@
+
 <!DOCTYPE html>
 <html lang="ko">
-
+    
 <head>
     <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="qtae.log">
+    <title>Hexo 블로그 시작하기 - 완벽 입문 가이드 - qtae.log</title>
     <meta name="author" content="qtae">
-
-
-    <meta name="subtitle" content="플랫폼 기획과 기술 사이">
-
-
-    <meta name="description" content="걱정 많은 AI 플랫폼 PM의 기획 일기. 기술과 서비스 기획 과정의 고민과 인사이트, 그리고 시고르잡종 곰이와의 일상 이야기.">
-
-
-    <meta name="keywords" content="AI 플랫폼, 기획자, PM, 서비스 기획, 개발 블로그, 인사이트, 일상">
-
-
-<title>Hexo 블로그 시작하기 - 완벽 입문 가이드 | qtae.log</title>
-
-
-
-    <link rel="icon" href="/favicon.ico">
-
-
-<!-- NanumSquare 웹폰트 불러오기 -->
-<link rel="preconnect" href="https://cdn.jsdelivr.net">
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<style>
-  @font-face {
-    font-family: 'NanumSquare';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2107@1.1/NanumSquare.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
-</style>
-
-
-
-
-    <!-- stylesheets list from _config.yml -->
     
-    <link rel="stylesheet" href="/css/style.css">
+        <meta name="keywords" content="AI 플랫폼,기획자,PM,개발 블로그,인사이트,일상,">
     
-
-
-
-    <!-- scripts list from _config.yml -->
     
-    <script src="/js/script.js"></script>
     
-    <script src="/js/tocbot.min.js"></script>
-    
-
-
-
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"qtae","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"articleBody":"\n🛠️ 1. 개발 환경 준비📌 필수 설치\nNode.js (LTS 버전)\nGit\n터미널 또는 명령 프롬프트\n\n123node -vnpm -vgit --version\n\n\n\n📁 2. 블로그 폴더 생성 및 초기화1234mkdir ~/Documents/blogcd ~/Documents/bloghexo initnpm install\n\n🔧 커스터마이징 팁\n폴더 이름은 나중에 GitHub repo 이름과 무관합니다.\nblog 대신 my-dev-blog, qtae-log 등 원하는 이름으로 자유롭게 설정하세요!\n\n\n🌐 3. GitHub 저장소 준비① GitHub에 저장소 2개 생성\n\n\n목적\n이름\n예시\n\n\n\n블로그 콘텐츠 버전 관리\nyourname.github.io-src\nqtae.github.io-src\n\n\n정적 파일 배포용 (GitHub Pages)\nyourname.github.io\nqtae.github.io\n\n\n② GitHub 저장소 주소 연결12345git initgit remote add origin https://github.com/yourname/yourname.github.io-src.gitgit add .git commit -m &quot;init&quot;git push -u origin main\n\n\n🎨 4. 테마 적용 (예: Chic 테마)12cd themesgit clone https://github.com/Siricee/hexo-theme-Chic.git Chic\n\n_config.yml 수정:\n1theme: Chic\n\n\n🖼️ 5. 이미지 저장소(GitHub) 세팅 - 선택 사항Image Upload Toolkit 플러그인 사용 시:\n\n별도 qtae-blog-images 저장소 생성\nAccess Token 생성\nhttps://raw.githubusercontent.com/USERNAME/REPO/main/ 형태로 이미지 경로 자동 적용\n\n\n🧾 6. 블로그 글 작성하기1hexo new &quot;hexo 시작 가이드&quot;\n\n생성된 파일:\n1source/_posts/hexo-시작-가이드.md\n\n\n🖥️ 7. 블로그 로컬 서버 실행123hexo cleanhexo generatehexo server\n\n\n접속 주소: http://localhost:4000\n\n\n🚀 8. GitHub Pages에 배포① 배포 설정 패키지 설치1npm install hexo-deployer-git --save\n\n② _config.yml 설정 추가1234deploy:  type: git  repo: https://github.com/yourname/yourname.github.io  branch: main\n\n③ 배포 실행1hexo deploy\n\n\n🎁 마무리 꿀팁\n_config.yml에서 post_asset_folder: true 설정 시 포스트별 이미지 폴더 관리 가능\n테마 커스터마이징은 themes/Chic/source/css/custom.styl 활용\nObsidian + Image Upload Toolkit 플러그인으로 이미지 자동 업로드 연동 가능\n\n\n📌 이제 나만의 개발 블로그를 Hexo로 멋지게 운영해보세요!\n","dateCreated":"2025-05-29T00:00:00+09:00","dateModified":"2025-05-30T05:06:40+09:00","datePublished":"2025-05-29T00:00:00+09:00","description":"\n🛠️ 1. 개발 환경 준비📌 필수 설치\nNode.js (LTS 버전)\nGit\n터미널 또는 명령 프롬프트\n\n123node -vnpm -vgit --version\n\n\n\n📁 2. 블로그 폴더 생성 및 초기화1234mkdir ~/Documents/blogcd ~/Documents/bloghexo initnpm install\n\n🔧 커스터마이징 팁\n폴더 이름은 나중에 GitHub repo 이름과 무관합니다.\nblog 대신 my-dev-blog, qtae-log 등 원하는 이름으로 자유롭게 설정하세요!\n\n\n🌐 3. GitHub 저장소 준비① GitHub에 저장소 2개 생성\n\n\n목적\n이름\n예시\n\n\n\n블로그 콘텐츠 버전 관리\nyourname.github.io-src\nqtae.github.io-src\n\n\n정적 파일 배포용 (GitHub Pages)\nyourname.github.io\nqtae.github.io\n\n\n② GitHub 저장소 주소 연결12345git initgit remote add origin https://github.com/yourname/yourname.github.io-src.gitgit add .git commit -m &quot;init&quot;git push -u origin main","headline":"Hexo 블로그 시작하기 - 완벽 입문 가이드","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://dailymusings.github.io/2025/05/29/hexo-guide-for-beginners/"},"publisher":{"@type":"Organization","name":"qtae","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"url":"https://dailymusings.github.io/2025/05/29/hexo-guide-for-beginners/","keywords":"Hexo, 블로그"}</script>
+    <meta name="description" content="🛠️ 1. 개발 환경 준비📌 필수 설치 Node.js (LTS 버전) Git 터미널 또는 명령 프롬프트  123node -vnpm -vgit --version    📁 2. 블로그 폴더 생성 및 초기화1234mkdir ~&#x2F;Documents&#x2F;blogcd ~&#x2F;Documents&#x2F;bloghexo initnpm install  🔧 커스터마이징 팁 폴더 이름">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Hexo 블로그 시작하기 - 완벽 입문 가이드">
+<meta property="og:url" content="https://dailymusings.github.io/2025/05/29/hexo-guide-for-beginners/index.html">
+<meta property="og:site_name" content="qtae.log">
+<meta property="og:description" content="🛠️ 1. 개발 환경 준비📌 필수 설치 Node.js (LTS 버전) Git 터미널 또는 명령 프롬프트  123node -vnpm -vgit --version    📁 2. 블로그 폴더 생성 및 초기화1234mkdir ~&#x2F;Documents&#x2F;blogcd ~&#x2F;Documents&#x2F;bloghexo initnpm install  🔧 커스터마이징 팁 폴더 이름">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://raw.githubusercontent.com/dailymusings/qtae-blog-images/ae1ba6ec053f7f9525686a4f876f25add35123ec/Pasted%20image%2020250530015159.png">
+<meta property="article:published_time" content="2025-05-28T15:00:00.000Z">
+<meta property="article:modified_time" content="2025-05-29T20:06:40.517Z">
+<meta property="article:author" content="qtae">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="블로그">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/dailymusings/qtae-blog-images/ae1ba6ec053f7f9525686a4f876f25add35123ec/Pasted%20image%2020250530015159.png">
     
     
         
     
+    
+    
+    
+    
+    <!--STYLES-->
+    
+<link rel="stylesheet" href="/assets/css/style-fc4iqyjtc1shxrtfgvl0s0x7pucalng1od8bxnjhh1m3ipalop8inrflh75y.min.css">
 
-
-<meta name="generator" content="Hexo 7.3.0"></head>
-
-<body>
-    <script>
-        // this function is used to check current theme before page loaded.
-        (() => {
-            const pagebody = document.getElementsByTagName('body')[0]
-
-            function setTheme(status) {
-
-                if (status === 'dark') {
-                    window.sessionStorage.theme = 'dark'
-                    pagebody.classList.add('dark-theme');
-
-                } else if (status === 'light') {
-                    window.sessionStorage.theme = 'light'
-                    pagebody.classList.remove('dark-theme');
-                }
-            };
-
-            setTheme(window.sessionStorage.theme)
-        })();
-    </script>
-
-    <div class="wrapper">
-        <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo"><a href="/">qtae.log</a></div>
-            <div class="menu navbar-right">
-                
-                <a class="menu-item" href="/archives">Posts</a>
-                
-                <a class="menu-item" href="/category">Categories</a>
-                
-                <a class="menu-item" href="/tag">Tags</a>
-                
-                <a class="menu-item" href="/about">About</a>
-                
-                
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
-            </div>
-        </div>
-    </nav>
+    <!--STYLES END-->
+    
 
     
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="/">qtae.log</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
-                </div>
-                <div class="menu-toggle" onclick="mobileBtn()">
-                    <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M4.5 17.27q-.213 0-.356-.145T4 16.768t.144-.356t.356-.143h15q.213 0 .356.144q.144.144.144.357t-.144.356t-.356.143zm0-4.77q-.213 0-.356-.144T4 11.999t.144-.356t.356-.143h15q.213 0 .356.144t.144.357t-.144.356t-.356.143zm0-4.77q-.213 0-.356-.143Q4 7.443 4 7.23t.144-.356t.356-.143h15q.213 0 .356.144T20 7.23t-.144.356t-.356.144z"/></svg>
-                    <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Material Symbols Light by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 12.708l-5.246 5.246q-.14.14-.344.15t-.364-.15t-.16-.354t.16-.354L11.292 12L6.046 6.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16L12 11.292l5.246-5.246q.14-.14.345-.15q.203-.01.363.15t.16.354t-.16.354L12.708 12l5.246 5.246q.14.14.15.345q.01.203-.15.363t-.354.16t-.354-.16z"/></svg>
-                </div>
-            </div>
-            <div class="menu" id="mobile-menu">
-                
-                <a class="menu-item" href="/archives">Posts</a>
-                
-                <a class="menu-item" href="/category">Categories</a>
-                
-                <a class="menu-item" href="/tag">Tags</a>
-                
-                <a class="menu-item" href="/about">About</a>
-                
-            </div>
-        </div>
-    </nav>
 
+    
+        
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a
+            class="header-title-link"
+            href="/"
+            aria-label=""
+        >
+            qtae.log
+        </a>
+    </div>
+    
+        
+            <a
+                class="header-right-picture "
+                href="#about"
+                aria-label="링크 열기: /#about"
+            >
+        
+        
+        </a>
+    
 </header>
-<script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if (toggleMenu.classList.contains("active")) {
-            toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        } else {
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
-        }
-    }
-</script>
-            <div class="main">
-                <div class="container">
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/"
+                            
+                            rel="noopener"
+                            title="Home"
+                        >
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-categories"
+                            
+                            rel="noopener"
+                            title="카테고리"
+                        >
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">카테고리</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-tags"
+                            
+                            rel="noopener"
+                            title="태그"
+                        >
+                        <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">태그</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-archives"
+                            
+                            rel="noopener"
+                            title="아카이브"
+                        >
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">아카이브</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link open-algolia-search"
+                            href="#search"
+                            
+                            rel="noopener"
+                            title="검색"
+                        >
+                        <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">검색</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="#about"
+                            
+                            rel="noopener"
+                            title="About"
+                        >
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">About</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://github.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="GitHub"
+                        >
+                        <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="http://stackoverflow.com/users"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Stack Overflow"
+                        >
+                        <i class="sidebar-button-icon fab fa-stack-overflow" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Stack Overflow</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://twitter.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Twitter"
+                        >
+                        <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://facebook.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Facebook"
+                        >
+                        <i class="sidebar-button-icon fab fa-facebook" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Facebook</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://plus.google.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Google +"
+                        >
+                        <i class="sidebar-button-icon fab fa-google-plus" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Google +</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://www.linkedin.com/profile/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="LinkedIn"
+                        >
+                        <i class="sidebar-button-icon fab fa-linkedin" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">LinkedIn</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/mailto"
+                            
+                            rel="noopener"
+                            title="Mail"
+                        >
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Mail</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/atom.xml"
+                            
+                            rel="noopener"
+                            title="RSS"
+                        >
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="4"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post">
     
     
-        <div class="post-toc">
-    <div class="tocbot-list">
-    </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-    </div>
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            Hexo 블로그 시작하기 - 완벽 입문 가이드
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time datetime="2025-05-29T00:00:00+09:00">
+	
+		    2025/05/29
+    	
+    </time>
+    
+        <span>카테고리 </span>
+        
+    <a class="category-link" href="/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8-%ED%82%A4%EC%9A%B0%EA%B8%B0/">블로그 키우기</a>
+
+
+    
 </div>
 
-<script>
-    var tocbot_timer;
-    var DEPTH_MAX = 6; // 为 6 时展开所有
-    var tocbot_default_config = {
-        tocSelector: '.tocbot-list',
-        contentSelector: '.post-content',
-        headingSelector: 'h1, h2, h3, h4, h5',
-        orderedList: false,
-        scrollSmooth: true,
-        onClick: extend_click,
-    };
-
-    function extend_click() {
-        clearTimeout(tocbot_timer);
-        tocbot_timer = setTimeout(function() {
-            tocbot.refresh(obj_merge(tocbot_default_config, {
-                hasInnerContainers: true
-            }));
-        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
-    }
-
-    document.ready(function() {
-        tocbot.init(obj_merge(tocbot_default_config, {
-            collapseDepth: 1
-        }));
-    });
-
-    function expand_toc() {
-        var b = document.querySelector('.tocbot-toc-expand');
-        var expanded = b.getAttribute('data-expanded');
-        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
-        tocbot.refresh(obj_merge(tocbot_default_config, {
-            collapseDepth: expanded ? 1 : DEPTH_MAX
-        }));
-        b.innerText = expanded ? 'Expand all' : 'Collapse all';
-    }
-
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
-
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
-    function obj_merge(target, source) {
-        for (var item in source) {
-            if (source.hasOwnProperty(item)) {
-                target[item] = source[item];
-            }
-        }
-        return target;
-    }
-</script>
     
+</div>
 
     
-    <article class="post-wrap">
-        <header class="post-header">
-            <h1 class="post-title">Hexo 블로그 시작하기 - 완벽 입문 가이드</h1>
-            
-                <div class="post-meta">
-                    
-                        <span class="post-category">
-                            
-                                <a href="/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8-%ED%82%A4%EC%9A%B0%EA%B8%B0/">블로그 키우기</a>
-                                
-                            
-                        </span>
-                    
-                
-                    
-                        
-                            <span class="separator"> · </span>
-                        
-                        <span class="post-time">2025-05-29</span>
-                    
-                </div>             
-            
-        </header>
-
-        <div class="post-content">
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
             <hr>
 <h2 id="🛠️-1-개발-환경-준비"><a href="#🛠️-1-개발-환경-준비" class="headerlink" title="🛠️ 1. 개발 환경 준비"></a>🛠️ 1. 개발 환경 준비</h2><h3 id="📌-필수-설치"><a href="#📌-필수-설치" class="headerlink" title="📌 필수 설치"></a>📌 필수 설치</h3><ul>
 <li><a target="_blank" rel="noopener" href="https://nodejs.org/">Node.js (LTS 버전)</a></li>
@@ -324,70 +428,318 @@
 <hr>
 <p>📌 <strong>이제 나만의 개발 블로그를 Hexo로 멋지게 운영해보세요!</strong></p>
 
+            
+
+
         </div>
-
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
         
-            <section class="post-copyright">
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">태그</span><br/>
                 
-                    <p class="copyright-item">
-                        <span>Author:</span>
-                        <span>qtae</span>
-                    </p>
-                
-                
-                
-                    <p class="copyright-item">
-                        <span>License:</span>
-                        <span>Copyright (c) <script>document.write(new Date().getFullYear())</script> <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
-                    </p>
-                
-                
-                     <p class="copyright-item">
-                         <span>Slogan:</span>
-                         <span>Writing today, remembering tomorrow. 💡</span>
-                     </p>
-                
+    <a class="tag tag--primary tag--small t-none-link" href="/tags/Hexo/" rel="tag">Hexo</a> <a class="tag tag--primary tag--small t-none-link" href="/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/" rel="tag">블로그</a>
 
-            </section>
+            </div>
         
-        <section class="post-tags">
-            <div>
-                <span>Tag(s):</span>
-                <span class="tag">
-                    
-                    
-                        <a href="/tags/Hexo/"># Hexo</a>
-                    
-                        <a href="/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/"># 블로그</a>
-                    
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
                         
-                </span>
-            </div>
-            <div>
-                <a href="javascript:window.history.back();">back</a>
-                <span>· </span>
-                <a href="/">home</a>
-            </div>
-        </section>
-        <section class="post-nav">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">이전</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2025/05/29/hexo-guide-for-beginners%201/"
+                    data-tooltip="Hexo 블로그 시작하기 - 완벽 입문 가이드"
+                    aria-label="다음: Hexo 블로그 시작하기 - 완벽 입문 가이드"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">다음</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="이 포스트 공유하기"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
             
             
-            <a class="next" rel="next" href="/2025/05/29/hexo-guide-for-beginners%201/">Hexo 블로그 시작하기 - 완벽 입문 가이드</a>
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://dailymusings.github.io/2025/05/29/hexo-guide-for-beginners/"
+                    title="Facebook에 공유하기"
+                    aria-label="Facebook에 공유하기"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
             
-        </section>
-
-
-    </article>
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=https://dailymusings.github.io/2025/05/29/hexo-guide-for-beginners/"
+                    title="Twitter에 공유하기"
+                    aria-label="Twitter에 공유하기"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=https://dailymusings.github.io/2025/05/29/hexo-guide-for-beginners/"
+                    title="Google+에 공유하기"
+                    aria-label="Google+에 공유하기"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="맨 위로">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
 </div>
 
-            </div>
-            <footer id="footer" class="footer">
-    <div class="copyright">
-        <span>© qtae | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+
+        
+        
+            
+        
     </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2025 qtae. All Rights Reserved.
+    </span>
 </footer>
 
-    </div>
-</body>
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">이전</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2025/05/29/hexo-guide-for-beginners%201/"
+                    data-tooltip="Hexo 블로그 시작하기 - 완벽 입문 가이드"
+                    aria-label="다음: Hexo 블로그 시작하기 - 완벽 입문 가이드"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">다음</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="이 포스트 공유하기"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://dailymusings.github.io/2025/05/29/hexo-guide-for-beginners/"
+                    title="Facebook에 공유하기"
+                    aria-label="Facebook에 공유하기"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=https://dailymusings.github.io/2025/05/29/hexo-guide-for-beginners/"
+                    title="Twitter에 공유하기"
+                    aria-label="Twitter에 공유하기"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=https://dailymusings.github.io/2025/05/29/hexo-guide-for-beginners/"
+                    title="Google+에 공유하기"
+                    aria-label="Google+에 공유하기"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="맨 위로">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
 
+
+                </div>
+                
+    <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+        <i id="btn-close-shareoptions" class="fa fa-times"></i>
+        <ul class="share-options">
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://www.facebook.com/sharer/sharer.php?u=https://dailymusings.github.io/2025/05/29/hexo-guide-for-beginners/"
+                        aria-label="Facebook에 공유하기"
+                    >
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Facebook에 공유하기</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://twitter.com/intent/tweet?text=https://dailymusings.github.io/2025/05/29/hexo-guide-for-beginners/"
+                        aria-label="Twitter에 공유하기"
+                    >
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Twitter에 공유하기</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://plus.google.com/share?url=https://dailymusings.github.io/2025/05/29/hexo-guide-for-beginners/"
+                        aria-label="Google+에 공유하기"
+                    >
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Google+에 공유하기</span>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <h4 id="about-card-name">qtae</h4>
+        
+            <div id="about-card-bio"><p>author.bio</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </div>
+        
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+
+<script src="/assets/js/script-hvnfftciv2p4jm6eovve4z70tqbvitqg8qryak2hmjfusldx2o8w9kevy2ja.min.js"></script>
+
+<!--SCRIPTS END-->
+
+
+    
+
+
+
+
+    </body>
 </html>
