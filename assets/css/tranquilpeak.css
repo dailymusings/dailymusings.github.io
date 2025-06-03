@@ -66,26 +66,17 @@ body {
   body.pushed {
     overflow-x: hidden; }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.04em;
   font-family: "NanumSquare", "Helvetica Neue", sans-serif;
   font-weight: 700;
   line-height: 1.45em;
   color: #4a4a4a; }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   margin: 1em 0 1em 0; }
 
-h4,
-h5,
-h6 {
+h4, h5, h6 {
   margin: 1em 0 0.5em 0; }
 
 h1 {
@@ -109,9 +100,7 @@ h6 {
 p {
   margin: 0 0 1.5em 0; }
 
-ul,
-ol,
-dl {
+ul, ol, dl {
   margin: 0 0 0.5em 0; }
 
 a, a:hover, a:active, a:visited {
@@ -171,8 +160,7 @@ code {
   background-color: #f7f8f8;
   padding: 0 10px; }
 
-acronym,
-abbr {
+acronym, abbr {
   border-bottom: 1px dotted #5d686f; }
 
 blockquote {
@@ -186,35 +174,25 @@ blockquote {
   blockquote > p:first-child {
     margin: 0; }
 
-@media only screen and (max-width: 767px) {
-  code {
-    font-size: 1.4rem; }
-  h1 {
-    font-size: 2.6rem; }
-  h2 {
-    font-size: 2.2rem; }
-  h3 {
-    font-size: 1.8rem; }
-  h4 {
-    font-size: 1.6rem; }
-  h5 {
-    font-size: 1.5rem; }
-  h6 {
-    font-size: 1.4rem; } }
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  h1 {
-    font-size: 2.65rem; }
-  h2 {
-    font-size: 2.25rem; }
-  h3 {
-    font-size: 1.85rem; }
-  h4 {
-    font-size: 1.65rem; }
-  h5 {
-    font-size: 1.55rem; }
-  h6 {
-    font-size: 1.45rem; } }
+#footer {
+  font-family: 'NanumSquareRound', 'Helvetica Neue', sans-serif;
+  color: #666;
+  padding: 1.2rem 0 2rem;
+  font-size: 1.4rem;
+  line-height: 1.6; }
+  #footer .footer-copyright,
+  #footer .footer-slogan {
+    margin: 0;
+    padding: 0; }
+  #footer .footer-slogan {
+    margin-top: 0.3rem;
+    font-size: 1.35rem;
+    color: #888; }
+  #footer a {
+    color: #349ef3;
+    text-decoration: none; }
+    #footer a:hover {
+      text-decoration: underline; }
 
 #about {
   display: none;
@@ -1837,21 +1815,20 @@ a.fancybox {
   padding: 0;
   overflow: hidden;
   font-family: 'NanumSquareRound', 'Helvetica Neue', sans-serif; }
+  .modal-header, .modal-body, .modal-footer {
+    font-family: inherit;
+    background: white; }
   .modal-header {
     position: relative;
     padding: 10px 15px 0;
-    background: white;
     border-bottom: 1px solid #eef2f8; }
   .modal-body {
     position: relative;
     padding: 0 15px;
-    overflow-y: auto;
-    background: white;
-    font-family: 'NanumSquareRound', 'Helvetica Neue', sans-serif; }
+    overflow-y: auto; }
   .modal-footer {
     height: 50px;
     padding: 0 15px;
-    background: white;
     border-top: 1px solid #eef2f8; }
   .modal .close-button {
     position: absolute;
