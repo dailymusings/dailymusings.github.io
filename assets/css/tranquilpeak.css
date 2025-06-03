@@ -1835,7 +1835,8 @@ a.fancybox {
   position: relative;
   margin: 0 auto;
   padding: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  font-family: 'NanumSquareRound', 'Helvetica Neue', sans-serif; }
   .modal-header {
     position: relative;
     padding: 10px 15px 0;
@@ -1845,7 +1846,8 @@ a.fancybox {
     position: relative;
     padding: 0 15px;
     overflow-y: auto;
-    background: white; }
+    background: white;
+    font-family: 'NanumSquareRound', 'Helvetica Neue', sans-serif; }
   .modal-footer {
     height: 50px;
     padding: 0 15px;
