@@ -1,0 +1,737 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hexo">
+    <title>인공지능이란 무엇인가? - 개념부터 활용까지 - Hexo</title>
+    <meta name="author" content="John Doe">
+    
+    
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"John Doe","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"articleBody":"인공지능(AI)은 더 이상 영화 속 기술이 아닙니다.이제는 우리의 일상과 산업 전반에 깊이 들어와 있는 현실이죠.\n\n\n\n이 글에서는 인공지능이란 무엇인지부터 시작해서,기계학습(Machine Learning), 딥러닝(Deep Learning), 그리고 우리가 실생활에서 어떻게 만나고 있는지 차근차근 살펴보겠습니다.\n\n🤖 인공지능이란?\n인공지능(AI, Artificial Intelligence)이란 인간의 지능적 행동을 컴퓨터가 모방하도록 만드는 기술입니다.\n\n초기에는 룰 기반 시스템(예: 체스 프로그램)처럼 단순한 결정 로직에 가까웠지만,이제는 데이터로부터 스스로 학습하는 방식(&#x3D; 머신러닝)을 통해 스스로 “지능”을 발전시키고 있습니다.\n\n📚 머신러닝 vs 딥러닝\n\n\n구분\n설명\n\n\n\n머신러닝\n데이터를 학습하여 예측하거나 분류\n\n\n딥러닝\n머신러닝 중에서도 인공신경망 기반의 학습 방식\n\n\n차이점\n딥러닝은 더 많은 데이터와 연산 자원을 요구하며, 정확도도 높음\n\n\n\n🛠️ 실생활 속 활용 사례\n챗봇과 음성비서: Siri, 카카오i\n콘텐츠 추천: 넷플릭스, 유튜브\n의료진단 보조: 암 진단 보조, 병리 이미지 판독\n자율주행 자동차: Tesla, 현대차\n\n\n✨ 마치며AI는 기술 그 자체보다 **”활용”과 “이해”**가 훨씬 중요합니다.기획자&#x2F;PM, 마케터, 디자이너 모두가 기초적인 개념과 흐름을 이해한다면 AI 시대에서 더 많은 가능성을 열 수 있겠죠.\n\n\n다음 글에서는 AI 프로젝트를 기획할 때 꼭 고려해야 할 질문들에 대해 다뤄볼 예정입니다.\n\n댓글이나 이메일로 궁금한 점을 편하게 남겨주세요. 😊\n","dateCreated":"2025-06-04T00:00:00+09:00","dateModified":"2025-06-10T00:21:16+09:00","datePublished":"2025-06-04T00:00:00+09:00","description":"인공지능(AI)은 더 이상 영화 속 기술이 아닙니다.이제는 우리의 일상과 산업 전반에 깊이 들어와 있는 현실이죠.","headline":"인공지능이란 무엇인가? - 개념부터 활용까지","image":["https://raw.githubusercontent.com/dailymusings/qtae-blog-images/ae1ba6ec053f7f9525686a4f876f25add35123ec/Pasted%20image%2020250530015159.png","https://raw.githubusercontent.com/dailymusings/qtae-blog-images/ae1ba6ec053f7f9525686a4f876f25add35123ec/Pasted%20image%2020250530015159.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2025/06/04/ai-intro.md/"},"publisher":{"@type":"Organization","name":"John Doe","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"url":"http://example.com/2025/06/04/ai-intro.md/","keywords":"인공지능, 머신러닝, 딥러닝","thumbnailUrl":"https://raw.githubusercontent.com/dailymusings/qtae-blog-images/ae1ba6ec053f7f9525686a4f876f25add35123ec/Pasted%20image%2020250530015159.png"}</script>
+    <meta name="description" content="인공지능(AI)은 더 이상 영화 속 기술이 아닙니다.이제는 우리의 일상과 산업 전반에 깊이 들어와 있는 현실이죠.">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="인공지능이란 무엇인가? - 개념부터 활용까지">
+<meta property="og:url" content="http://example.com/2025/06/04/ai-intro.md/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="인공지능(AI)은 더 이상 영화 속 기술이 아닙니다.이제는 우리의 일상과 산업 전반에 깊이 들어와 있는 현실이죠.">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-06-03T15:00:00.000Z">
+<meta property="article:modified_time" content="2025-06-09T15:21:16.265Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="인공지능">
+<meta property="article:tag" content="머신러닝">
+<meta property="article:tag" content="딥러닝">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+    
+    
+    
+        <meta property="og:image" content="https://raw.githubusercontent.com/dailymusings/qtae-blog-images/ae1ba6ec053f7f9525686a4f876f25add35123ec/Pasted%20image%2020250530015159.png"/>
+        <meta class="swiftype" name="image" data-type="enum" content="https://raw.githubusercontent.com/dailymusings/qtae-blog-images/ae1ba6ec053f7f9525686a4f876f25add35123ec/Pasted%20image%2020250530015159.png"/>
+    
+    
+        <meta property="og:image" content="https://raw.githubusercontent.com/dailymusings/qtae-blog-images/ae1ba6ec053f7f9525686a4f876f25add35123ec/Pasted%20image%2020250530015159.png"/>
+        <meta class="swiftype" name="image" data-type="enum" content="https://raw.githubusercontent.com/dailymusings/qtae-blog-images/ae1ba6ec053f7f9525686a4f876f25add35123ec/Pasted%20image%2020250530015159.png"/>
+    
+    
+    <!--STYLES-->
+    
+<link rel="stylesheet" href="/assets/css/all.css">
+
+    
+<link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
+
+    
+<link rel="stylesheet" href="/assets/css/thumbs.css">
+
+    
+<link rel="stylesheet" href="/assets/css/tranquilpeak.css">
+
+    <!--STYLES END-->
+    
+
+    
+
+    
+        
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a
+            class="header-title-link"
+            href="/"
+            aria-label=""
+        >
+            Hexo
+        </a>
+    </div>
+    
+        
+            <a
+                class="header-right-picture "
+                href="#about"
+                aria-label="Open the link: /#about"
+            >
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/"
+                            
+                            rel="noopener"
+                            title="Home"
+                        >
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-categories"
+                            
+                            rel="noopener"
+                            title="Categories"
+                        >
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Categories</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-tags"
+                            
+                            rel="noopener"
+                            title="Tags"
+                        >
+                        <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-archives"
+                            
+                            rel="noopener"
+                            title="Archives"
+                        >
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Archives</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link open-algolia-search"
+                            href="#search"
+                            
+                            rel="noopener"
+                            title="Search"
+                        >
+                        <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Search</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="#about"
+                            
+                            rel="noopener"
+                            title="About"
+                        >
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">About</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://github.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="GitHub"
+                        >
+                        <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="http://stackoverflow.com/users"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Stack Overflow"
+                        >
+                        <i class="sidebar-button-icon fab fa-stack-overflow" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Stack Overflow</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://twitter.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Twitter"
+                        >
+                        <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://facebook.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Facebook"
+                        >
+                        <i class="sidebar-button-icon fab fa-facebook" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Facebook</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://plus.google.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Google +"
+                        >
+                        <i class="sidebar-button-icon fab fa-google-plus" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Google +</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://www.linkedin.com/profile/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="LinkedIn"
+                        >
+                        <i class="sidebar-button-icon fab fa-linkedin" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">LinkedIn</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/mailto"
+                            
+                            rel="noopener"
+                            title="Mail"
+                        >
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Mail</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/atom.xml"
+                            
+                            rel="noopener"
+                            title="RSS"
+                        >
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+        <div class="post-header-cover
+                    text-left
+                    post-header-cover--full"
+             style="background-image:url('https://raw.githubusercontent.com/dailymusings/qtae-blog-images/ae1ba6ec053f7f9525686a4f876f25add35123ec/Pasted%20image%2020250530015159.png');"
+             data-behavior="4">
+            
+        </div>
+
+            <div id="main" data-behavior="4"
+                 class="hasCover
+                        hasCoverMetaOut
+                        hasCoverCaption">
+                
+<article class="post">
+    
+        <span class="post-header-cover-caption caption">기술과 인간의 만남</span>
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            인공지능이란 무엇인가? - 개념부터 활용까지
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time datetime="2025-06-04T00:00:00+09:00">
+	
+		    Jun 04, 2025
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/AI/">AI</a>
+
+
+    
+</div>
+
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <p>인공지능(AI)은 더 이상 영화 속 기술이 아닙니다.<br>이제는 우리의 일상과 산업 전반에 깊이 들어와 있는 현실이죠.</p>
+<span id="more"></span>
+
+
+<p>이 글에서는 인공지능이란 무엇인지부터 시작해서,<br>기계학습(Machine Learning), 딥러닝(Deep Learning), 그리고 우리가 실생활에서 어떻게 만나고 있는지 차근차근 살펴보겠습니다.</p>
+<hr>
+<h2 id="🤖-인공지능이란"><a href="#🤖-인공지능이란" class="headerlink" title="🤖 인공지능이란?"></a>🤖 인공지능이란?</h2><blockquote>
+<p>인공지능(AI, Artificial Intelligence)이란 인간의 지능적 행동을 컴퓨터가 모방하도록 만드는 기술입니다.</p>
+</blockquote>
+<p>초기에는 룰 기반 시스템(예: 체스 프로그램)처럼 단순한 결정 로직에 가까웠지만,<br>이제는 데이터로부터 스스로 학습하는 방식(&#x3D; 머신러닝)을 통해 스스로 “지능”을 발전시키고 있습니다.</p>
+<hr>
+<h2 id="📚-머신러닝-vs-딥러닝"><a href="#📚-머신러닝-vs-딥러닝" class="headerlink" title="📚 머신러닝 vs 딥러닝"></a>📚 머신러닝 vs 딥러닝</h2><table>
+<thead>
+<tr>
+<th>구분</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>머신러닝</td>
+<td>데이터를 학습하여 예측하거나 분류</td>
+</tr>
+<tr>
+<td>딥러닝</td>
+<td>머신러닝 중에서도 인공신경망 기반의 학습 방식</td>
+</tr>
+<tr>
+<td>차이점</td>
+<td>딥러닝은 더 많은 데이터와 연산 자원을 요구하며, 정확도도 높음</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="🛠️-실생활-속-활용-사례"><a href="#🛠️-실생활-속-활용-사례" class="headerlink" title="🛠️ 실생활 속 활용 사례"></a>🛠️ 실생활 속 활용 사례</h2><ul>
+<li><strong>챗봇과 음성비서</strong>: Siri, 카카오i</li>
+<li><strong>콘텐츠 추천</strong>: 넷플릭스, 유튜브</li>
+<li><strong>의료진단 보조</strong>: 암 진단 보조, 병리 이미지 판독</li>
+<li><strong>자율주행 자동차</strong>: Tesla, 현대차</li>
+</ul>
+<hr>
+<h2 id="✨-마치며"><a href="#✨-마치며" class="headerlink" title="✨ 마치며"></a>✨ 마치며</h2><p>AI는 기술 그 자체보다 **”활용”과 “이해”**가 훨씬 중요합니다.<br>기획자&#x2F;PM, 마케터, 디자이너 모두가 <strong>기초적인 개념과 흐름</strong>을 이해한다면 AI 시대에서 더 많은 가능성을 열 수 있겠죠.</p>
+<hr>
+<blockquote>
+<p>다음 글에서는 <strong>AI 프로젝트를 기획할 때 꼭 고려해야 할 질문들</strong>에 대해 다뤄볼 예정입니다.</p>
+</blockquote>
+<p>댓글이나 이메일로 궁금한 점을 편하게 남겨주세요. 😊</p>
+
+            
+
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-none-link" href="/tags/%EB%94%A5%EB%9F%AC%EB%8B%9D/" rel="tag">딥러닝</a> <a class="tag tag--primary tag--small t-none-link" href="/tags/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/" rel="tag">머신러닝</a> <a class="tag tag--primary tag--small t-none-link" href="/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5/" rel="tag">인공지능</a>
+
+            </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
+                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Share this post"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2025/06/04/ai-intro.md/"
+                    title="Share on Facebook"
+                    aria-label="Share on Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=http://example.com/2025/06/04/ai-intro.md/"
+                    title="Share on Twitter"
+                    aria-label="Share on Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=http://example.com/2025/06/04/ai-intro.md/"
+                    title="Share on Google+"
+                    aria-label="Share on Google+"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2025 John Doe. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
+                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Share this post"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2025/06/04/ai-intro.md/"
+                    title="Share on Facebook"
+                    aria-label="Share on Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=http://example.com/2025/06/04/ai-intro.md/"
+                    title="Share on Twitter"
+                    aria-label="Share on Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=http://example.com/2025/06/04/ai-intro.md/"
+                    title="Share on Google+"
+                    aria-label="Share on Google+"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                
+    <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+        <i id="btn-close-shareoptions" class="fa fa-times"></i>
+        <ul class="share-options">
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2025/06/04/ai-intro.md/"
+                        aria-label="Share on Facebook"
+                    >
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Share on Facebook</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://twitter.com/intent/tweet?text=http://example.com/2025/06/04/ai-intro.md/"
+                        aria-label="Share on Twitter"
+                    >
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://plus.google.com/share?url=http://example.com/2025/06/04/ai-intro.md/"
+                        aria-label="Share on Google+"
+                    >
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google+</span>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <h4 id="about-card-name">John Doe</h4>
+        
+            <div id="about-card-bio"><p>author.bio</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </div>
+        
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+
+<script src="/assets/js/jquery.js"></script>
+
+
+<script src="/assets/js/jquery.fancybox.js"></script>
+
+
+<script src="/assets/js/thumbs.js"></script>
+
+
+<script src="/assets/js/tranquilpeak.js"></script>
+
+<!--SCRIPTS END-->
+
+
+    
+
+
+
+
+    </body>
+</html>
