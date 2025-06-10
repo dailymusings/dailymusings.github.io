@@ -1,0 +1,526 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="qtae.log">
+    <title>Chain-of-Zoom - AI가 만드는 극한 확대의 마법 - qtae.log</title>
+    <meta name="author" content="qtae">
+    
+    <meta name="keywords" content="AI 플랫폼,기획자,PM,개발 블로그,인사이트,일상,">
+    
+
+    <!-- ✅ NanumSquareRound Web Font -->
+    <link href="https://cdn.jsdelivr.net/gh/innks/NanumSquareRound/nanumsquareround.min.css" rel="stylesheet">
+
+    
+    <link rel="icon" href="https://dailymusings.github.io/assets/images/favicon.ico">
+    
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"qtae","sameAs":[],"image":"avatar.jpg"},"articleBody":"어제 연구실에서 논문을 읽다가 깜짝 놀랄 만한 기술을 발견했어요.흐릿한 사진 한 장을 무려 256배까지 확대할 수 있다는 AI 기술이더라고요.\n\n\n처음엔 “설마, 그게 가능해?” 싶었는데, 결과물을 보니 정말 소름이 돋았어요.\n![Pasted image 20250611011305](https://raw.githubusercontent.com/dailymusings/qtae-blog-images/main/\\Pasted image 20250611011305.png)\n그 이름하여 **’Chain-of-Zoom(CoZ)’**이라고 하는데요.이게 무슨 운동인지… 아니, 무슨 기술인지 궁금해서 파고들어 봤더니, 기존 이미지 확대 기술의 판도를 완전히 바꿀 만한 혁신이더라고요.\n\n“기존 AI는 4배 확대가 한계였는데, 이제는 256배까지 선명하게 확대가 가능하다”- Chain-of-Zoom 연구팀, 2024년\n\n그래서 오늘은 이 놀라운 기술이 어떻게 작동하는지, 우리 일상에 어떤 변화를 가져올지 한번 파헤쳐봤어요!\n\nChapter 1.기존 AI의 한계, 왜 4배만 확대하고 말았을까?먼저 기존 이미지 확대 기술의 문제점부터 알아볼까요?\n지금까지의 초해상도(Super-Resolution) AI들은 한 가지 치명적인 약점이 있었어요. 바로 **”훈련된 배율에서만 제대로 작동한다”**는 거죠.\n예를 들어서 4배 확대로 훈련된 AI에게 16배 확대를 시키면?\n결과는 참혹해요. 블러 투성이에 이상한 아티팩트들이 여기저기 생기더라고요.\n이런 문제를 해결하려면 더 높은 배율로 새로 훈련해야 했는데, 그때마다 어마어마한 비용과 시간이 들었거든요.\n\n쉽게 말하면: 100×100 픽셀 사진을 400×400으로 만드는 건 잘하는데, 1600×1600으로 만들어달라고 하면 완전 망가진다는 뜻이에요.\n\n\nChapter 2.Chain-of-Zoom의 천재적 아이디어: “한 번에 말고, 단계별로!”그런데 Chain-of-Zoom은 완전히 다른 접근을 했어요.\n“한 번에 256배 확대하지 말고, 여러 단계로 나누어서 조금씩 확대하자!”\n마치 계단을 한 번에 뛰어오르는 대신 한 칸씩 올라가는 것처럼 말이에요.\n![Pasted image 20250611011315](https://raw.githubusercontent.com/dailymusings/qtae-blog-images/main/\\Pasted image 20250611011315.png)\n핵심 메커니즘: 3단계 마법1단계: 저해상도 이미지 입력2단계: AI가 이미지를 보고 설명 텍스트 생성 (“강아지가 물가에서 막대기를 물고 있다”)3단계: 이미지 + 텍스트를 함께 사용해서 확대반복: 원하는 배율까지 2-3단계 계속 반복\n이렇게 하니까 뭐가 좋냐면, 기존 4배 확대 모델을 그대로 써서 256배까지 확대가 가능해진 거예요!\n새로 훈련할 필요도 없고, 비용도 훨씬 적게 들고요.\n\n핵심 포인트: 이미지만으로는 정보가 부족하니까, AI가 직접 이미지를 분석해서 만든 텍스트 설명을 추가로 활용한다는 게 진짜 혁신적이에요.\n\n\nChapter 3.인간의 눈을 사로잡는 비밀병기: GRPO 파인튜닝여기서 한 가지 더 똑똑한 게 있어요.\n그냥 아무 텍스트나 만들어서 쓰는 게 아니라, 인간이 선호하는 방식으로 텍스트를 생성하도록 AI를 훈련시켰다는 거예요.\n이걸 **GRPO(Generalized Reward Policy Optimization)**라고 하는데요.\n![Pasted image 20250611011340](https://raw.githubusercontent.com/dailymusings/qtae-blog-images/main/\\Pasted image 20250611011340.png)\n인간 선호도 학습 과정\nAI가 이미지 설명 생성\n다른 AI(크리틱)가 그 설명의 품질을 평가\n인간이 선호하는 방향으로 점진적 개선\n불필요한 반복이나 이상한 표현 제거\n\n결과적으로 더 정확하고, 더 자연스러운 텍스트 가이드가 만들어지더라고요.\n실제 실험에서도 인간 평가자들이 압도적으로 선호한다는 결과가 나왔어요!\n\nChapter 4.실전 성능: 기존 방법들과 비교해보니…연구팀이 여러 방법들을 비교 테스트한 결과를 보면:\n방법별 성능 비교최근접 이웃 보간법: 16배부터 완전 망가짐기존 4배 SR 모델: 8배만 넘어가도 블러 심각Chain-of-Zoom: 256배까지 놀라운 품질 유지!\n특히 인상적이었던 건, MOS(Mean Opinion Score) 테스트에서 인간 평가자들이 CoZ로 만든 이미지를 압도적으로 선호했다는 거예요.\n\nMOS란?: 1-5점 척도로 이미지 품질을 평가하는 표준 방법이에요. 점수가 높을수록 인간이 보기에 더 자연스럽다는 뜻이죠.\n\n![Pasted image 20250611011540](https://raw.githubusercontent.com/dailymusings/qtae-blog-images/main/\\Pasted image 20250611011540.png)![Pasted image 20250611011545](https://raw.githubusercontent.com/dailymusings/qtae-blog-images/main/\\Pasted image 20250611011545.png)\n\nChapter 5.우리 일상을 바꿀 활용 분야들이 기술이 상용화되면 어떤 분야에서 활용될까요?\n의료 영상: 생명을 구하는 기술MRI, CT 스캔 이미지를 고해상도로 변환해서 의사들이 미세한 병변까지 찾아낼 수 있어요. 조기 진단의 혁명이 될 수 있겠더라고요.\n위성·항공 영상: 지구를 더 자세히구글 어스나 기상 위성 이미지를 극도로 확대해서 더 정밀한 분석이 가능해질 거예요. 재해 대응이나 도시 계획에도 엄청난 도움이 될 듯해요.\n디지털 복원: 추억을 되살리는 마법오래된 가족사진이나 역사적 문서들을 놀라운 품질로 복원할 수 있어요. 흐릿했던 할아버지 사진도 선명하게 볼 수 있게 될 거예요!\n보안·감시: CSI 드라마가 현실로CCTV 영상에서 흐릿하게 나온 얼굴이나 번호판도 선명하게 확대해서 식별할 수 있겠더라고요.\n![Pasted image 20250611011552](https://raw.githubusercontent.com/dailymusings/qtae-blog-images/main/\\Pasted image 20250611011552.png)Chapter 6.아직 남은 숙제들: 완벽하지는 않아요물론 아직 한계점들도 있어요.\n속도 문제여러 단계를 거쳐야 하다 보니, 기존 방법보다는 시간이 더 걸려요. 실시간 처리가 필요한 곳에서는 아직 어려울 수 있겠더라고요.\nAI 의존성텍스트 생성 AI의 성능에 따라 최종 결과가 좌우돼요. 만약 이미지 설명을 잘못 생성하면 확대 품질도 떨어질 수 있어요.\n계산 비용단계별로 처리하다 보니 GPU 연산량이 만만치 않아요. 개인 사용자들이 쉽게 접근하기에는 아직 비용 부담이 있을 수 있겠어요.\n\n마무리: 이미지 확대의 새로운 시대가 열렸다!Chain-of-Zoom을 보면서 정말 놀랐던 게, 기존 기술을 완전히 새로 만든 게 아니라 똑똑하게 조합해서 획기적인 결과를 만들어냈다는 거예요.\n“한 번에 하지 말고 단계별로” + “이미지만 말고 텍스트도” + “인간의 선호도를 반영하자”\n이 세 가지 아이디어만으로도 256배 확대라는 놀라운 성과를 낸 거죠.\n앞으로 몇 년 안에 우리가 흐릿한 사진을 걱정할 일이 없어질지도 모르겠어요. 스마트폰 갤러리에 있는 오래된 사진들도 AI 한 번이면 고화질로 변신할 테니까요!\n\n원본 논문: Chain-of-Zoom\n다음 글 예고: 다음에는 음성을 이미지로 만드는 AI 기술에 대해 파헤쳐볼 예정이에요. 기대해 주세요!\n","dateCreated":"2025-06-11T00:00:00+09:00","dateModified":"2025-06-11T01:18:24+09:00","datePublished":"2025-06-11T00:00:00+09:00","description":"어제 연구실에서 논문을 읽다가 깜짝 놀랄 만한 기술을 발견했어요.흐릿한 사진 한 장을 무려 256배까지 확대할 수 있다는 AI 기술이더라고요.","headline":"Chain-of-Zoom - AI가 만드는 극한 확대의 마법","image":["https://raw.githubusercontent.com/dailymusings/qtae-blog-images/ae1ba6ec053f7f9525686a4f876f25add35123ec/chain-of-zoom-thumbnail.png","https://raw.githubusercontent.com/dailymusings/qtae-blog-images/ae1ba6ec053f7f9525686a4f876f25add35123ec/chain-of-zoom-cover.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://dailymusings.github.io/2025/06/11/chain-of-zoom-ai-image-upscaling/"},"publisher":{"@type":"Organization","name":"qtae","sameAs":[],"image":"avatar.jpg","logo":{"@type":"ImageObject","url":"avatar.jpg"}},"url":"https://dailymusings.github.io/2025/06/11/chain-of-zoom-ai-image-upscaling/","keywords":"AI기술","thumbnailUrl":"https://raw.githubusercontent.com/dailymusings/qtae-blog-images/ae1ba6ec053f7f9525686a4f876f25add35123ec/chain-of-zoom-thumbnail.png"}</script>
+    <meta name="description" content="어제 연구실에서 논문을 읽다가 깜짝 놀랄 만한 기술을 발견했어요.흐릿한 사진 한 장을 무려 256배까지 확대할 수 있다는 AI 기술이더라고요.">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Chain-of-Zoom - AI가 만드는 극한 확대의 마법">
+<meta property="og:url" content="https://dailymusings.github.io/2025/06/11/chain-of-zoom-ai-image-upscaling/index.html">
+<meta property="og:site_name" content="qtae.log">
+<meta property="og:description" content="어제 연구실에서 논문을 읽다가 깜짝 놀랄 만한 기술을 발견했어요.흐릿한 사진 한 장을 무려 256배까지 확대할 수 있다는 AI 기술이더라고요.">
+<meta property="og:locale" content="ko_KR">
+<meta property="article:published_time" content="2025-06-10T15:00:00.000Z">
+<meta property="article:modified_time" content="2025-06-10T16:18:24.968Z">
+<meta property="article:author" content="qtae">
+<meta property="article:tag" content="AI기술">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://dailymusings.github.io/assets/images/avatar.jpg"/>
+    
+    
+        <meta property="og:image" content="https://raw.githubusercontent.com/dailymusings/qtae-blog-images/ae1ba6ec053f7f9525686a4f876f25add35123ec/chain-of-zoom-thumbnail.png"/>
+        <meta class="swiftype" name="image" data-type="enum" content="https://raw.githubusercontent.com/dailymusings/qtae-blog-images/ae1ba6ec053f7f9525686a4f876f25add35123ec/chain-of-zoom-thumbnail.png"/>
+    
+    
+        <meta property="og:image" content="https://raw.githubusercontent.com/dailymusings/qtae-blog-images/ae1ba6ec053f7f9525686a4f876f25add35123ec/chain-of-zoom-cover.png"/>
+        <meta class="swiftype" name="image" data-type="enum" content="https://raw.githubusercontent.com/dailymusings/qtae-blog-images/ae1ba6ec053f7f9525686a4f876f25add35123ec/chain-of-zoom-cover.png"/>
+    
+    
+
+    <!--STYLES-->
+    
+<link rel="stylesheet" href="/assets/css/style-xwthzr4b8bisn7jr6r5yu35o0b2jafdlesnnggua3tfepfpdnzyhjf8t0mkx.min.css">
+
+    <!--STYLES END-->
+
+    
+
+    
+
+    
+        
+    
+</head>
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="5">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a
+            class="header-title-link"
+            href="/"
+            aria-label=""
+        >
+            qtae.log
+        </a>
+    </div>
+    
+        
+            <a
+                class="header-right-picture "
+                href="/about"
+                aria-label="링크 열기: /about"
+            >
+        
+        
+            <img class="header-picture" src="/assets/images/avatar.jpg" alt="저자 이미지"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="5">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a
+                    href="/#about"
+                    aria-label="저자에 대해 더 알아보기"
+                >
+                    <img class="sidebar-profile-picture" src="/assets/images/avatar.jpg" alt="저자 이미지"/>
+                </a>
+                <h4 class="sidebar-profile-name">qtae</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>걱정 많은 AI 플랫폼 기획자의 일상 기록</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/"
+                            
+                            rel="noopener"
+                            title="Home"
+                        >
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-categories"
+                            
+                            rel="noopener"
+                            title="카테고리"
+                        >
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">카테고리</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-tags"
+                            
+                            rel="noopener"
+                            title="태그"
+                        >
+                        <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">태그</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link open-algolia-search"
+                            href="#search"
+                            
+                            rel="noopener"
+                            title="검색"
+                        >
+                        <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">검색</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/about"
+                            
+                            rel="noopener"
+                            title="About"
+                        >
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">About</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+        <div class="post-header-cover
+                    text-left
+                    post-header-cover--full"
+             style="background-image:url('https://raw.githubusercontent.com/dailymusings/qtae-blog-images/ae1ba6ec053f7f9525686a4f876f25add35123ec/chain-of-zoom-cover.png');"
+             data-behavior="5">
+            
+        </div>
+
+            <div id="main" data-behavior="5"
+                 class="hasCover
+                        hasCoverMetaOut
+                        hasCoverCaption">
+                
+<article class="post">
+    
+        <span class="post-header-cover-caption caption">256배 확대가 가능한 혁신적 AI 기술</span>
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            Chain-of-Zoom - AI가 만드는 극한 확대의 마법
+        </h1>
+    
+    
+        <div class="post-meta">
+    
+        
+    <a class="category-link" href="/categories/AI/">AI</a>, <a class="category-link" href="/categories/AI/Computer-Vision/">Computer Vision</a>
+
+
+        ·
+    
+    <time datetime="2025-06-11T00:00:00+09:00">
+        
+            2025/06/11
+        
+    </time>
+</div>
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <p>어제 연구실에서 논문을 읽다가 깜짝 놀랄 만한 기술을 발견했어요.<br>흐릿한 사진 한 장을 무려 <strong>256배</strong>까지 확대할 수 있다는 AI 기술이더라고요.</p>
+<span id="more"></span>
+
+<p>처음엔 “설마, 그게 가능해?” 싶었는데, 결과물을 보니 정말 소름이 돋았어요.</p>
+<p>![Pasted image 20250611011305](<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/dailymusings/qtae-blog-images/main//Pasted">https://raw.githubusercontent.com/dailymusings/qtae-blog-images/main/\Pasted</a> image 20250611011305.png)</p>
+<p>그 이름하여 **’Chain-of-Zoom(CoZ)’**이라고 하는데요.<br>이게 무슨 운동인지… 아니, 무슨 기술인지 궁금해서 파고들어 봤더니, 기존 이미지 확대 기술의 판도를 완전히 바꿀 만한 혁신이더라고요.</p>
+<blockquote>
+<p><strong>“기존 AI는 4배 확대가 한계였는데, 이제는 256배까지 선명하게 확대가 가능하다”</strong><br><em>- Chain-of-Zoom 연구팀, 2024년</em></p>
+</blockquote>
+<p>그래서 오늘은 이 놀라운 기술이 어떻게 작동하는지, 우리 일상에 어떤 변화를 가져올지 한번 파헤쳐봤어요!</p>
+<hr>
+<h2 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1."></a>Chapter 1.</h2><h2 id="기존-AI의-한계-왜-4배만-확대하고-말았을까"><a href="#기존-AI의-한계-왜-4배만-확대하고-말았을까" class="headerlink" title="기존 AI의 한계, 왜 4배만 확대하고 말았을까?"></a>기존 AI의 한계, 왜 4배만 확대하고 말았을까?</h2><p>먼저 기존 이미지 확대 기술의 문제점부터 알아볼까요?</p>
+<p>지금까지의 <strong>초해상도(Super-Resolution) AI</strong>들은 한 가지 치명적인 약점이 있었어요. 바로 **”훈련된 배율에서만 제대로 작동한다”**는 거죠.</p>
+<p>예를 들어서 4배 확대로 훈련된 AI에게 16배 확대를 시키면?</p>
+<p>결과는 참혹해요. 블러 투성이에 이상한 아티팩트들이 여기저기 생기더라고요.</p>
+<p>이런 문제를 해결하려면 더 높은 배율로 새로 훈련해야 했는데, 그때마다 어마어마한 비용과 시간이 들었거든요.</p>
+<blockquote>
+<p><strong>쉽게 말하면</strong>: 100×100 픽셀 사진을 400×400으로 만드는 건 잘하는데, 1600×1600으로 만들어달라고 하면 완전 망가진다는 뜻이에요.</p>
+</blockquote>
+<hr>
+<h2 id="Chapter-2"><a href="#Chapter-2" class="headerlink" title="Chapter 2."></a>Chapter 2.</h2><h2 id="Chain-of-Zoom의-천재적-아이디어-“한-번에-말고-단계별로-”"><a href="#Chain-of-Zoom의-천재적-아이디어-“한-번에-말고-단계별로-”" class="headerlink" title="Chain-of-Zoom의 천재적 아이디어: “한 번에 말고, 단계별로!”"></a>Chain-of-Zoom의 천재적 아이디어: “한 번에 말고, 단계별로!”</h2><p>그런데 Chain-of-Zoom은 완전히 다른 접근을 했어요.</p>
+<p><strong>“한 번에 256배 확대하지 말고, 여러 단계로 나누어서 조금씩 확대하자!”</strong></p>
+<p>마치 계단을 한 번에 뛰어오르는 대신 한 칸씩 올라가는 것처럼 말이에요.</p>
+<p>![Pasted image 20250611011315](<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/dailymusings/qtae-blog-images/main//Pasted">https://raw.githubusercontent.com/dailymusings/qtae-blog-images/main/\Pasted</a> image 20250611011315.png)</p>
+<h3 id="핵심-메커니즘-3단계-마법"><a href="#핵심-메커니즘-3단계-마법" class="headerlink" title="핵심 메커니즘: 3단계 마법"></a>핵심 메커니즘: 3단계 마법</h3><p><strong>1단계</strong>: 저해상도 이미지 입력<br><strong>2단계</strong>: AI가 이미지를 보고 설명 텍스트 생성 (“강아지가 물가에서 막대기를 물고 있다”)<br><strong>3단계</strong>: 이미지 + 텍스트를 함께 사용해서 확대<br><strong>반복</strong>: 원하는 배율까지 2-3단계 계속 반복</p>
+<p>이렇게 하니까 뭐가 좋냐면, <strong>기존 4배 확대 모델을 그대로 써서</strong> 256배까지 확대가 가능해진 거예요!</p>
+<p>새로 훈련할 필요도 없고, 비용도 훨씬 적게 들고요.</p>
+<blockquote>
+<p><strong>핵심 포인트</strong>: 이미지만으로는 정보가 부족하니까, AI가 직접 이미지를 분석해서 만든 텍스트 설명을 추가로 활용한다는 게 진짜 혁신적이에요.</p>
+</blockquote>
+<hr>
+<h2 id="Chapter-3"><a href="#Chapter-3" class="headerlink" title="Chapter 3."></a>Chapter 3.</h2><h2 id="인간의-눈을-사로잡는-비밀병기-GRPO-파인튜닝"><a href="#인간의-눈을-사로잡는-비밀병기-GRPO-파인튜닝" class="headerlink" title="인간의 눈을 사로잡는 비밀병기: GRPO 파인튜닝"></a>인간의 눈을 사로잡는 비밀병기: GRPO 파인튜닝</h2><p>여기서 한 가지 더 똑똑한 게 있어요.</p>
+<p>그냥 아무 텍스트나 만들어서 쓰는 게 아니라, <strong>인간이 선호하는 방식으로</strong> 텍스트를 생성하도록 AI를 훈련시켰다는 거예요.</p>
+<p>이걸 **GRPO(Generalized Reward Policy Optimization)**라고 하는데요.</p>
+<p>![Pasted image 20250611011340](<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/dailymusings/qtae-blog-images/main//Pasted">https://raw.githubusercontent.com/dailymusings/qtae-blog-images/main/\Pasted</a> image 20250611011340.png)</p>
+<h3 id="인간-선호도-학습-과정"><a href="#인간-선호도-학습-과정" class="headerlink" title="인간 선호도 학습 과정"></a>인간 선호도 학습 과정</h3><ol>
+<li><strong>AI가 이미지 설명 생성</strong></li>
+<li><strong>다른 AI(크리틱)가 그 설명의 품질을 평가</strong></li>
+<li><strong>인간이 선호하는 방향으로 점진적 개선</strong></li>
+<li><strong>불필요한 반복이나 이상한 표현 제거</strong></li>
+</ol>
+<p>결과적으로 더 정확하고, 더 자연스러운 텍스트 가이드가 만들어지더라고요.</p>
+<p>실제 실험에서도 <strong>인간 평가자들이 압도적으로 선호</strong>한다는 결과가 나왔어요!</p>
+<hr>
+<h2 id="Chapter-4"><a href="#Chapter-4" class="headerlink" title="Chapter 4."></a>Chapter 4.</h2><h2 id="실전-성능-기존-방법들과-비교해보니…"><a href="#실전-성능-기존-방법들과-비교해보니…" class="headerlink" title="실전 성능: 기존 방법들과 비교해보니…"></a>실전 성능: 기존 방법들과 비교해보니…</h2><p>연구팀이 여러 방법들을 비교 테스트한 결과를 보면:</p>
+<h3 id="방법별-성능-비교"><a href="#방법별-성능-비교" class="headerlink" title="방법별 성능 비교"></a>방법별 성능 비교</h3><p><strong>최근접 이웃 보간법</strong>: 16배부터 완전 망가짐<br><strong>기존 4배 SR 모델</strong>: 8배만 넘어가도 블러 심각<br><strong>Chain-of-Zoom</strong>: 256배까지 놀라운 품질 유지!</p>
+<p>특히 인상적이었던 건, <strong>MOS(Mean Opinion Score) 테스트</strong>에서 인간 평가자들이 CoZ로 만든 이미지를 압도적으로 선호했다는 거예요.</p>
+<blockquote>
+<p><strong>MOS란?</strong>: 1-5점 척도로 이미지 품질을 평가하는 표준 방법이에요. 점수가 높을수록 인간이 보기에 더 자연스럽다는 뜻이죠.</p>
+</blockquote>
+<p>![Pasted image 20250611011540](<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/dailymusings/qtae-blog-images/main//Pasted">https://raw.githubusercontent.com/dailymusings/qtae-blog-images/main/\Pasted</a> image 20250611011540.png)<br>![Pasted image 20250611011545](<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/dailymusings/qtae-blog-images/main//Pasted">https://raw.githubusercontent.com/dailymusings/qtae-blog-images/main/\Pasted</a> image 20250611011545.png)</p>
+<hr>
+<h2 id="Chapter-5"><a href="#Chapter-5" class="headerlink" title="Chapter 5."></a>Chapter 5.</h2><h2 id="우리-일상을-바꿀-활용-분야들"><a href="#우리-일상을-바꿀-활용-분야들" class="headerlink" title="우리 일상을 바꿀 활용 분야들"></a>우리 일상을 바꿀 활용 분야들</h2><p>이 기술이 상용화되면 어떤 분야에서 활용될까요?</p>
+<h3 id="의료-영상-생명을-구하는-기술"><a href="#의료-영상-생명을-구하는-기술" class="headerlink" title="의료 영상: 생명을 구하는 기술"></a>의료 영상: 생명을 구하는 기술</h3><p><strong>MRI, CT 스캔 이미지</strong>를 고해상도로 변환해서 의사들이 미세한 병변까지 찾아낼 수 있어요. 조기 진단의 혁명이 될 수 있겠더라고요.</p>
+<h3 id="위성·항공-영상-지구를-더-자세히"><a href="#위성·항공-영상-지구를-더-자세히" class="headerlink" title="위성·항공 영상: 지구를 더 자세히"></a>위성·항공 영상: 지구를 더 자세히</h3><p>구글 어스나 기상 위성 이미지를 극도로 확대해서 더 정밀한 분석이 가능해질 거예요. 재해 대응이나 도시 계획에도 엄청난 도움이 될 듯해요.</p>
+<h3 id="디지털-복원-추억을-되살리는-마법"><a href="#디지털-복원-추억을-되살리는-마법" class="headerlink" title="디지털 복원: 추억을 되살리는 마법"></a>디지털 복원: 추억을 되살리는 마법</h3><p>오래된 가족사진이나 역사적 문서들을 놀라운 품질로 복원할 수 있어요. 흐릿했던 할아버지 사진도 선명하게 볼 수 있게 될 거예요!</p>
+<h3 id="보안·감시-CSI-드라마가-현실로"><a href="#보안·감시-CSI-드라마가-현실로" class="headerlink" title="보안·감시: CSI 드라마가 현실로"></a>보안·감시: CSI 드라마가 현실로</h3><p>CCTV 영상에서 흐릿하게 나온 얼굴이나 번호판도 선명하게 확대해서 식별할 수 있겠더라고요.</p>
+<h2 id="Pasted-image-20250611011552-https-raw-githubusercontent-com-dailymusings-qtae-blog-images-main-Pasted-image-20250611011552-png"><a href="#Pasted-image-20250611011552-https-raw-githubusercontent-com-dailymusings-qtae-blog-images-main-Pasted-image-20250611011552-png" class="headerlink" title="![Pasted image 20250611011552](https://raw.githubusercontent.com/dailymusings/qtae-blog-images/main/\Pasted image 20250611011552.png)"></a>![Pasted image 20250611011552](<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/dailymusings/qtae-blog-images/main//Pasted">https://raw.githubusercontent.com/dailymusings/qtae-blog-images/main/\Pasted</a> image 20250611011552.png)</h2><h2 id="Chapter-6"><a href="#Chapter-6" class="headerlink" title="Chapter 6."></a>Chapter 6.</h2><h2 id="아직-남은-숙제들-완벽하지는-않아요"><a href="#아직-남은-숙제들-완벽하지는-않아요" class="headerlink" title="아직 남은 숙제들: 완벽하지는 않아요"></a>아직 남은 숙제들: 완벽하지는 않아요</h2><p>물론 아직 한계점들도 있어요.</p>
+<h3 id="속도-문제"><a href="#속도-문제" class="headerlink" title="속도 문제"></a>속도 문제</h3><p>여러 단계를 거쳐야 하다 보니, 기존 방법보다는 시간이 더 걸려요. 실시간 처리가 필요한 곳에서는 아직 어려울 수 있겠더라고요.</p>
+<h3 id="AI-의존성"><a href="#AI-의존성" class="headerlink" title="AI 의존성"></a>AI 의존성</h3><p>텍스트 생성 AI의 성능에 따라 최종 결과가 좌우돼요. 만약 이미지 설명을 잘못 생성하면 확대 품질도 떨어질 수 있어요.</p>
+<h3 id="계산-비용"><a href="#계산-비용" class="headerlink" title="계산 비용"></a>계산 비용</h3><p>단계별로 처리하다 보니 GPU 연산량이 만만치 않아요. 개인 사용자들이 쉽게 접근하기에는 아직 비용 부담이 있을 수 있겠어요.</p>
+<hr>
+<h2 id="마무리-이미지-확대의-새로운-시대가-열렸다"><a href="#마무리-이미지-확대의-새로운-시대가-열렸다" class="headerlink" title="마무리: 이미지 확대의 새로운 시대가 열렸다!"></a>마무리: 이미지 확대의 새로운 시대가 열렸다!</h2><p>Chain-of-Zoom을 보면서 정말 놀랐던 게, <strong>기존 기술을 완전히 새로 만든 게 아니라 똑똑하게 조합</strong>해서 획기적인 결과를 만들어냈다는 거예요.</p>
+<p><strong>“한 번에 하지 말고 단계별로”</strong> + <strong>“이미지만 말고 텍스트도”</strong> + <strong>“인간의 선호도를 반영하자”</strong></p>
+<p>이 세 가지 아이디어만으로도 256배 확대라는 놀라운 성과를 낸 거죠.</p>
+<p>앞으로 몇 년 안에 우리가 흐릿한 사진을 걱정할 일이 없어질지도 모르겠어요. 스마트폰 갤러리에 있는 오래된 사진들도 AI 한 번이면 고화질로 변신할 테니까요!</p>
+<hr>
+<p><strong>원본 논문</strong>: <a target="_blank" rel="noopener" href="https://bryanswkim.github.io/chain-of-zoom/">Chain-of-Zoom</a></p>
+<p><strong>다음 글 예고</strong>: 다음에는 음성을 이미지로 만드는 AI 기술에 대해 파헤쳐볼 예정이에요. 기대해 주세요!</p>
+
+            
+
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">태그</span><br/>
+                
+    <a class="tag tag--primary tag--small t-none-link" href="/tags/AI%EA%B8%B0%EC%88%A0/" rel="tag">AI기술</a>
+
+            </div>
+        
+        
+            
+    <div class="post-actions-wrap">
+        <nav>
+            <ul class="post-actions post-action-nav">
+                <li class="post-action">
+                    
+                        <a
+                            class="post-action-btn btn btn--disabled"
+                            aria-hidden="true"
+                        >
+                            
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            <span class="hide-xs hide-sm text-small icon-ml">이전</span>
+                        </a>
+                </li>
+                <li class="post-action">
+                    
+                        
+                    <a
+                        class="post-action-btn btn btn--default tooltip--top"
+                        href="/2025/06/04/ai-intro.md/"
+                        data-tooltip="인공지능이란 무엇인가? - 개념부터 활용까지"
+                        aria-label="다음: 인공지능이란 무엇인가? - 개념부터 활용까지"
+                    >
+                        
+                            <span class="hide-xs hide-sm text-small icon-mr">다음</span>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                </li>
+            </ul>
+        </nav>
+        <ul class="post-actions post-action-share">
+            <li class="post-action hide-lg hide-md hide-sm">
+                <a
+                    class="post-action-btn btn btn--default btn-open-shareoptions"
+                    href="#btn-open-shareoptions"
+                    aria-label="이 포스트 공유하기"
+                >
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            
+                
+            
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default" href="#" aria-label="맨 위로">
+                
+                    <i class="fa fa-list" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    
+        
+        
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap text-center">
+  <p class="footer-copyright">
+    &copy; <script>document.write(new Date().getFullYear())</script> qtae.
+    <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a> LICENSE.
+  </p>
+  <p class="footer-slogan">💡 Writing today, remembering tomorrow.</p>
+</footer>
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+                    
+    <div class="post-actions-wrap">
+        <nav>
+            <ul class="post-actions post-action-nav">
+                <li class="post-action">
+                    
+                        <a
+                            class="post-action-btn btn btn--disabled"
+                            aria-hidden="true"
+                        >
+                            
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            <span class="hide-xs hide-sm text-small icon-ml">이전</span>
+                        </a>
+                </li>
+                <li class="post-action">
+                    
+                        
+                    <a
+                        class="post-action-btn btn btn--default tooltip--top"
+                        href="/2025/06/04/ai-intro.md/"
+                        data-tooltip="인공지능이란 무엇인가? - 개념부터 활용까지"
+                        aria-label="다음: 인공지능이란 무엇인가? - 개념부터 활용까지"
+                    >
+                        
+                            <span class="hide-xs hide-sm text-small icon-mr">다음</span>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                </li>
+            </ul>
+        </nav>
+        <ul class="post-actions post-action-share">
+            <li class="post-action hide-lg hide-md hide-sm">
+                <a
+                    class="post-action-btn btn btn--default btn-open-shareoptions"
+                    href="#btn-open-shareoptions"
+                    aria-label="이 포스트 공유하기"
+                >
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            
+                
+            
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default" href="#" aria-label="맨 위로">
+                
+                    <i class="fa fa-list" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    
+                </div>
+                
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/avatar.jpg" alt="저자 이미지"/>
+        
+            <h4 id="about-card-name">qtae</h4>
+        
+            <div id="about-card-bio"><p>걱정 많은 AI 플랫폼 기획자의 일상 기록</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>AI 플랫폼 기획자</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker-alt"></i>
+                <br/>
+                대한민국
+            </div>
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('https://github.com/dailymusings/qtae-blog-images/blob/main/cover-v1.3.0.jpg?raw=true');"></div>
+        <!--SCRIPTS-->
+
+<script src="/assets/js/script-l2xqcdf94ttk5lneysbn4vdfo71yhxwvtlcz8e6qmsvkjz8s4pqq9axmed4t.min.js"></script>
+
+<!--SCRIPTS END-->
+
+
+    
+
+
+
+
+    </body>
+</html>
